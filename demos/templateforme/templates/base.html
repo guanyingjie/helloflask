@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block header %}
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                Hello Angie
+            {% endblock %}
+        </title>
+        {% block style %}
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+            <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='favicon.ico') }}">
+        {% endblock %}
+    {% endblock %}
+</head>
+<nav>
+    <ul>
+        <li>
+            <a href="{{ url_for('index)') }}">
+                Home
+            </a>
+        </li>
+    </ul>
+</nav>
+<body>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+    {% block footer %}
+    {% endblock %}
+</footer>
+<script>
+    {% block scripts %}
+
+    {% endblock %}
+</script>
+</body>
+</html>

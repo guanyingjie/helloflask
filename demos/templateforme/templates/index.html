@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import qux %}
+{% block content %}
+    <h1>
+    Template
+    </h1>
+    <ul>
+        <li>
+            <a href="{{ url_for('watchlist') }}">watchlist</a>
+        </li>
+        <li>filter: {{ foo|musicial }}</li>
+        <li>global: {{ bar() }}</li>
+        <li>test: {% if name is baz %}I am baz{% endif %}</li>
+        <li>macros: {{ qux(5) }}</li>
+    </ul>
+{% endblock %}
+
+{% block style %}
+{{ super() }}
+<style>
+    .footer {
+        color: #0f74a8;
+    }
+</style>
