@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Markup
+from flask import Flask, render_template, Markup, flash, redirect, url_for
 
 app = Flask(__name__)
 
@@ -48,3 +48,8 @@ def baz(n):
         return True
     else:
         return False
+
+@app.route('/flash')
+def just_flash():
+    flash("welcome to yingjie's movie")
+    return redirect(url_for('watchlist'))

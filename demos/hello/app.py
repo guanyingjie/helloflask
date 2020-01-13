@@ -30,6 +30,7 @@ def say_hello():
 def greet(name):
     return '<h1>Hello, %s!</h1>' % name
 
+app.debug = True
 
 # custom flask cli command
 @app.cli.command()
